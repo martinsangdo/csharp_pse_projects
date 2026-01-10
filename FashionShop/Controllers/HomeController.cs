@@ -6,16 +6,16 @@ namespace FashionShop.Controllers;
 
 public class HomeController : Controller
 {
+    public IActionResult Index()
+    {
+        return View("~/Views/malefashion/shop.cshtml");
+    }
+    
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
-    }
-
-    public IActionResult Index()
-    {
-        return View();
     }
 
     public IActionResult Privacy()
