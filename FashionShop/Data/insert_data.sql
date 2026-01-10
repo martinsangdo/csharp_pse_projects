@@ -20,50 +20,50 @@ USE malefashion;
 
 -- INSERT INTO ProductImages (ProductID, Url)
 -- VALUES
--- (1, 'https://img.fashionstore.com/products/1/main.jpg'),
--- (1, 'https://img.fashionstore.com/products/1/side.jpg'),
--- (1, 'https://img.fashionstore.com/products/1/back.jpg'),
+-- (1, '/malefashion/img/product/product-2.jpg'),
+-- (1, '/malefashion/img/product/product-2.jpg'),
+-- (1, '/malefashion/img/product/product-2.jpg'),
 
--- (2, 'https://img.fashionstore.com/products/2/main.jpg'),
--- (2, 'https://img.fashionstore.com/products/2/side.jpg'),
+-- (2, '/malefashion/img/product/product-2.jpg'),
+-- (2, '/malefashion/img/product/product-2.jpg'),
 
--- (3, 'https://img.fashionstore.com/products/3/main.jpg'),
--- (3, 'https://img.fashionstore.com/products/3/zoom.jpg'),
+-- (3, '/malefashion/img/product/product-2.jpg'),
+-- (3, '/malefashion/img/product/product-2.jpg'),
 
--- (4, 'https://img.fashionstore.com/products/4/main.jpg'),
--- (4, 'https://img.fashionstore.com/products/4/side.jpg'),
--- (4, 'https://img.fashionstore.com/products/4/back.jpg'),
+-- (4, '/malefashion/img/product/product-2.jpg'),
+-- (4, '/malefashion/img/product/product-2.jpg'),
+-- (4, '/malefashion/img/product/product-2.jpg'),
 
--- (5, 'https://img.fashionstore.com/products/5/main.jpg'),
--- (5, 'https://img.fashionstore.com/products/5/side.jpg'),
+-- (5, '/malefashion/img/product/product-2.jpg'),
+-- (5, '/malefashion/img/product/product-2.jpg'),
 
--- (6, 'https://img.fashionstore.com/products/6/main.jpg'),
--- (6, 'https://img.fashionstore.com/products/6/zoom.jpg'),
+-- (6, '/malefashion/img/product/product-2.jpg'),
+-- (6, '/malefashion/img/product/product-2.jpg'),
 
--- (7, 'https://img.fashionstore.com/products/7/main.jpg'),
--- (7, 'https://img.fashionstore.com/products/7/side.jpg'),
+-- (7, '/malefashion/img/product/product-2.jpg'),
+-- (7, '/malefashion/img/product/product-2.jpg'),
 
--- (8, 'https://img.fashionstore.com/products/8/main.jpg'),
--- (8, 'https://img.fashionstore.com/products/8/detail.jpg'),
+-- (8, '/malefashion/img/product/product-2.jpg'),
+-- (8, '/malefashion/img/product/product-2.jpg'),
 
--- (9, 'https://img.fashionstore.com/products/9/main.jpg'),
--- (9, 'https://img.fashionstore.com/products/9/side.jpg'),
--- (9, 'https://img.fashionstore.com/products/9/back.jpg'),
+-- (9, '/malefashion/img/product/product-2.jpg'),
+-- (9, '/malefashion/img/product/product-2.jpg'),
+-- (9, '/malefashion/img/product/product-2.jpg'),
 
--- (10, 'https://img.fashionstore.com/products/10/main.jpg'),
--- (10, 'https://img.fashionstore.com/products/10/side.jpg'),
+-- (10, '/malefashion/img/product/product-2.jpg'),
+-- (10, '/malefashion/img/product/product-2.jpg'),
 
--- (11, 'https://img.fashionstore.com/products/11/main.jpg'),
--- (11, 'https://img.fashionstore.com/products/11/detail.jpg'),
+-- (11, '/malefashion/img/product/product-2.jpg'),
+-- (11, '/malefashion/img/product/product-2.jpg'),
 
--- (12, 'https://img.fashionstore.com/products/12/main.jpg'),
--- (12, 'https://img.fashionstore.com/products/12/side.jpg'),
+-- (12, '/malefashion/img/product/product-2.jpg'),
+-- (12, '/malefashion/img/product/product-2.jpg'),
 
--- (13, 'https://img.fashionstore.com/products/13/main.jpg'),
--- (13, 'https://img.fashionstore.com/products/13/back.jpg'),
+-- (13, '/malefashion/img/product/product-2.jpg'),
+-- (13, '/malefashion/img/product/product-2.jpg'),
 
--- (14, 'https://img.fashionstore.com/products/14/main.jpg'),
--- (14, 'https://img.fashionstore.com/products/14/side.jpg');
+-- (14, '/malefashion/img/product/product-2.jpg'),
+-- (14, '/malefashion/img/product/product-2.jpg');
 
 -- INSERT INTO Brands (BrandName)
 -- VALUES

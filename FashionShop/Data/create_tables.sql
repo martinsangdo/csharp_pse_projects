@@ -3,7 +3,7 @@ USE malefashion;
 -- SELECT name FROM sys.objects WHERE name = 'Products';
 
 -- CREATE TABLE Products (
---     ProductID UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
+--     ProductID INT IDENTITY(1,1) PRIMARY KEY,
 --     Name NVARCHAR(255),
 --     Description TEXT,
 --     BrandID TINYINT,
@@ -22,24 +22,24 @@ USE malefashion;
 -- );
 
 -- CREATE TABLE ProductImages (
---     ImageID UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
---     ProductID INTEGER,
+--     ImageID INT IDENTITY(1,1) PRIMARY KEY,
+--     ProductID INT,
 --     Url NVARCHAR(500)
 -- );
 
 -- CREATE TABLE Brands (
---     BrandID UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
+--     BrandID INT IDENTITY(1,1) PRIMARY KEY,
 --     BrandName NVARCHAR(150)
 -- );
 
 -- CREATE TABLE Categories (
---     CategoryID UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
---     ParentID INTEGER NULL,
+--     CategoryID INT IDENTITY(1,1) PRIMARY KEY,
+--     ParentID INT NULL,
 --     CategoryName NVARCHAR(150)
 -- );
 
 -- CREATE TABLE AppUsers (
---     UserID UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
+--     UserID INT IDENTITY(1,1) PRIMARY KEY,
 --     Email NVARCHAR(255) UNIQUE NOT NULL,
 --     PasswordHash NVARCHAR(500),
 --     FullName NVARCHAR(150),

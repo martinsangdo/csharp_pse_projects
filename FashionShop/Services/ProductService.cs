@@ -14,22 +14,33 @@ public class ProductService
         _db = db;
     }
 
-    public PagedResult<Product> GetListPagination(int page, int limit)
+    public PagedResult<ProductDto> GetListPagination(int page, int limit)
     {
-        if (page < 1) page = 1;
-        if (limit < 1) limit = 10;
+        var query =
+            from p in _db.Products
+            join i in _db.ProductImages on p.ProductID equals i.ProductID into imgs
+            select new ProductDto
+            {
+                ProductID = p.ProductID,
+                Name = p.Name,
+                Price = p.Price,
+                Description = p.Description,
+                ImageUrl = imgs.Select(x => x.Url).FirstOrDefault()   // FIRST image
+            };
 
-        var query = _db.Products.AsNoTracking();
+        var total = query.Count();
 
-        return new PagedResult<Product>
+        var data = query.OrderBy(x => x.ProductID)
+                        .Skip((page - 1) * limit)
+                        .Take(limit)
+                        .ToList();
+
+        return new PagedResult<ProductDto>
         {
             Page = page,
             Limit = limit,
-            Total = query.Count(),
-            Data = query.OrderBy(p => p.ProductID)
-                        .Skip((page - 1) * limit)
-                        .Take(limit)
-                        .ToList()
+            Total = total,
+            Data = data
         };
     }
     //get top categories
