@@ -17,14 +17,14 @@ public class ProductsController : Controller
     [Route("/")]
     public IActionResult list()
     {
-        _logger.LogInformation("Get list");
-
         var products = _productService.getListPagination();
         ViewBag.products = products;
 
-        _logger.LogInformation("Loaded {Count} products", products.Count);
-        
-        //sample categories
+        //categories
+        ViewBag.categories = _productService.getLeafCategories();
+
+        ViewBag.brands = _productService.getTopBrands();
+
         // ViewBag.categories = new List<string> { "Keyboard", "Mouse", "PC", "Printer" };
         return View("~/Views/malefashion/shop.cshtml");
     }
