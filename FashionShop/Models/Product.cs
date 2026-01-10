@@ -11,6 +11,8 @@ public class Product
     public required int BrandID { get; set; }
 
     public double Price { get; set; }
+    public double DiscountPrice { get; set; }
+
     public byte Quantity { get; set; }
     public bool IsActive { get; set; }
     public double Star { get; set; }

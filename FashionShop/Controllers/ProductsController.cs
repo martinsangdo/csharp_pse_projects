@@ -33,9 +33,11 @@ public class ProductsController : Controller
     }
 
     //display page detail of a product
+    [Route("/product/{id:int?}")]
     public IActionResult detail(int id)
     {
-        return View();
+
+        return View("~/Views/malefashion/product-details.cshtml");
     }
 
     [Route("products/shop/detail")]    //custom url
