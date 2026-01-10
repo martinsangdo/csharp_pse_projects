@@ -11,7 +11,7 @@ Layout = null;
     <meta name="keywords" content="Male_Fashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Male-Fashion</title>
+    <title>Category</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
@@ -67,7 +67,7 @@ Layout = null;
                                             <div class="shop__sidebar__categories">
                                                 <ul class="nice-scroll">
                                                     @foreach (var c in ViewBag.categories){
-                                                        <li><a href="/category/@c.CategoryID">@c.CategoryName</a></li>
+                                                        <li><a href="#">@c.CategoryName</a></li>
                                                     }
                                                 </ul>
                                             </div>
@@ -116,23 +116,16 @@ Layout = null;
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="shop__product__option__right">
-                                    <p>Sort by Price:</p>
-                                    <select>
-                                        <option value="">Low To High</option>
-                                        <option value="">$0 - $55</option>
-                                        <option value="">$55 - $100</option>
-                                    </select>
+                                    <h2>Shirts</h2>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
 
-
-                        @foreach (var p in ViewBag.products){
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                        <div class="product__item__pic set-bg" data-setbg="@p.ImageUrl">
+                                        <div class="product__item__pic set-bg" data-setbg="/malefashion/img/product/product-2.jpg">
                                             <ul class="product__hover">
                                                 <li><a href="#"><img src="~/malefashion/img/icon/heart.png" alt=""></a></li>
                                                 <li><a href="#"><img src="~/malefashion/img/icon/compare.png" alt=""> <span>Compare</span></a>
@@ -141,33 +134,14 @@ Layout = null;
                                             </ul>
                                         </div>
                                     <div class="product__item__text rating">
-                                        <h6>@p.Name</h6>
+                                        <h6>Slim Fit White Shirt</h6>
                                         <a href="#" class="add-cart">+ Add To Cart</a>
-                                        @{
-                                            double rating = p.Star;
-                                            int fullStars = (int)Math.Floor(rating);      // 3
-                                            bool halfStar = (rating - fullStars) >= 0.5; // true if 0.5+
-                                            int emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
-                                        }
-
-                                        @* Full stars *@
-                                        @for (int i = 0; i < fullStars; i++)
-                                        {
-                                            <i class="fa fa-star"></i>
-                                        }
-
-                                        @* Half star *@
-                                        @if (halfStar)
-                                        {
-                                            <i class="fa fa-star-half-o"></i>
-                                        }
-
-                                        @* Empty stars *@
-                                        @for (int i = 0; i < emptyStars; i++)
-                                        {
-                                            <i class="fa fa-star-o"></i>
-                                        }
-                                        <h5 style="cursor:pointer;" onclick="window.location.href='/product/@p.ProductID';">$@p.Price</h5>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                        <h5 style="cursor:pointer;" onclick="window.location.href='/product/1';">$39.99</h5>
                                         <div class="product__color__select">
                                             <label for="pc-4">
                                                 <input type="radio" id="pc-4">
@@ -182,39 +156,41 @@ Layout = null;
                                     </div>
                                 </div>
                             </div>
-                        }
 
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            @{
-                                int current = ViewBag.Page;
-                                int total = ViewBag.Total;
-                                int limit = ViewBag.Limit;
-
-                                int totalPages = (int)Math.Ceiling((double)total / limit);
-                            }
-
-                            <div class="product__pagination">
-
-                                @if (current > 1)
-                                {
-                                    <a href="/@(current - 1)">&laquo;</a>
-                                }
-
-                                @for (int i = Math.Max(1, current - 2); i <= Math.Min(totalPages, current + 2); i++)
-                                {
-                                    <a href="/@i" class="@(i == current ? "active" : "")">@i</a>
-                                }
-
-                                @if (current < totalPages)
-                                {
-                                    <a href="/@(current + 1)">&raquo;</a>
-                                }
-
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                        <div class="product__item__pic set-bg" data-setbg="/malefashion/img/product/product-12.jpg">
+                                            <ul class="product__hover">
+                                                <li><a href="#"><img src="~/malefashion/img/icon/heart.png" alt=""></a></li>
+                                                <li><a href="#"><img src="~/malefashion/img/icon/compare.png" alt=""> <span>Compare</span></a>
+                                                </li>
+                                                <li><a href="#"><img src="~/malefashion/img/icon/search.png" alt=""></a></li>
+                                            </ul>
+                                        </div>
+                                    <div class="product__item__text rating">
+                                        <h6>Striped Casual Shirts</h6>
+                                        <a href="#" class="add-cart">+ Add To Cart</a>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <h5 style="cursor:pointer;" onclick="window.location.href='/product/1';">$34.99</h5>
+                                        <div class="product__color__select">
+                                            <label for="pc-4">
+                                                <input type="radio" id="pc-4">
+                                            </label>
+                                            <label class="active black" for="pc-5">
+                                                <input type="radio" id="pc-5">
+                                            </label>
+                                            <label class="grey" for="pc-6">
+                                                <input type="radio" id="pc-6">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                        </div>
                     </div>
                 </div>
             </div>

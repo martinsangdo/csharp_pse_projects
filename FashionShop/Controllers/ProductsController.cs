@@ -40,9 +40,14 @@ public class ProductsController : Controller
         return View("~/Views/malefashion/product-details.cshtml");
     }
 
-    [Route("products/shop/detail")]    //custom url
-    public IActionResult showShopDetailPage()
+    [Route("/category/{id:int?}")]
+    public IActionResult categoryProducts(int id)
     {
-        return View("~/Views/malefashion/product-details.cshtml");
+        //categories
+        ViewBag.categories = _productService.getLeafCategories();
+
+        ViewBag.brands = _productService.getTopBrands();
+
+        return View("~/Views/malefashion/category.cshtml");
     }
 }
