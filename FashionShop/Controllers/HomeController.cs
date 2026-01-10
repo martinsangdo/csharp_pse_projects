@@ -34,4 +34,14 @@ public class HomeController : Controller
     {
         return View("~/Views/malefashion/contact.cshtml");
     }
+    //login
+    public IActionResult Signin()
+    {
+        return View("~/Views/dashmin/signin.cshtml");
+    }
+    //register
+    public IActionResult Signup()
+    {
+        return View("~/Views/dashmin/signup.cshtml");
+    }
 }
