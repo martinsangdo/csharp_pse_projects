@@ -21,49 +21,34 @@ USE malefashion;
 -- INSERT INTO ProductImages (ProductID, Url)
 -- VALUES
 -- (1, '/malefashion/img/product/product-2.jpg'),
--- (1, '/malefashion/img/product/product-2.jpg'),
--- (1, '/malefashion/img/product/product-2.jpg'),
+-- (1, '/malefashion/img/product/product-4.jpg'),
+-- (1, '/malefashion/img/product/product-12.jpg'),
 
--- (2, '/malefashion/img/product/product-2.jpg'),
--- (2, '/malefashion/img/product/product-2.jpg'),
+-- (2, '/malefashion/img/product/product-3.jpg'),
 
--- (3, '/malefashion/img/product/product-2.jpg'),
--- (3, '/malefashion/img/product/product-2.jpg'),
+-- (3, '/malefashion/img/product/product-5.jpg'),
 
--- (4, '/malefashion/img/product/product-2.jpg'),
--- (4, '/malefashion/img/product/product-2.jpg'),
--- (4, '/malefashion/img/product/product-2.jpg'),
+-- (4, '/malefashion/img/product/product-1.jpg'),
 
--- (5, '/malefashion/img/product/product-2.jpg'),
--- (5, '/malefashion/img/product/product-2.jpg'),
+-- (5, '/malefashion/img/product/product-6.jpg'),
 
--- (6, '/malefashion/img/product/product-2.jpg'),
--- (6, '/malefashion/img/product/product-2.jpg'),
+-- (6, '/malefashion/img/product/product-7.jpg'),
 
--- (7, '/malefashion/img/product/product-2.jpg'),
--- (7, '/malefashion/img/product/product-2.jpg'),
+-- (7, '/malefashion/img/product/product-8.jpg'),
 
--- (8, '/malefashion/img/product/product-2.jpg'),
--- (8, '/malefashion/img/product/product-2.jpg'),
+-- (8, '/malefashion/img/product/product-9.jpg'),
 
--- (9, '/malefashion/img/product/product-2.jpg'),
--- (9, '/malefashion/img/product/product-2.jpg'),
--- (9, '/malefashion/img/product/product-2.jpg'),
+-- (9, '/malefashion/img/product/product-10.jpg'),
 
--- (10, '/malefashion/img/product/product-2.jpg'),
--- (10, '/malefashion/img/product/product-2.jpg'),
+-- (10, '/malefashion/img/product/product-11.jpg'),
 
--- (11, '/malefashion/img/product/product-2.jpg'),
--- (11, '/malefashion/img/product/product-2.jpg'),
+-- (11, '/malefashion/img/product/product-12.jpg'),
 
--- (12, '/malefashion/img/product/product-2.jpg'),
--- (12, '/malefashion/img/product/product-2.jpg'),
+-- (12, '/malefashion/img/product/product-13.jpg'),
 
--- (13, '/malefashion/img/product/product-2.jpg'),
--- (13, '/malefashion/img/product/product-2.jpg'),
+-- (13, '/malefashion/img/product/product-14.jpg'),
 
--- (14, '/malefashion/img/product/product-2.jpg'),
--- (14, '/malefashion/img/product/product-2.jpg');
+-- (14, '/malefashion/img/product/product-5.jpg'),
 
 -- INSERT INTO Brands (BrandName)
 -- VALUES

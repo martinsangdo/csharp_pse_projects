@@ -150,14 +150,14 @@ Layout = null;
                         @foreach (var p in ViewBag.products){
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="@p.ImageUrl">
-                                        <ul class="product__hover">
-                                            <li><a href="#"><img src="~/malefashion/img/icon/heart.png" alt=""></a></li>
-                                            <li><a href="#"><img src="~/malefashion/img/icon/compare.png" alt=""> <span>Compare</span></a>
-                                            </li>
-                                            <li><a href="#"><img src="~/malefashion/img/icon/search.png" alt=""></a></li>
-                                        </ul>
-                                    </div>
+                                        <div class="product__item__pic set-bg" data-setbg="@p.ImageUrl">
+                                            <ul class="product__hover">
+                                                <li><a href="#"><img src="~/malefashion/img/icon/heart.png" alt=""></a></li>
+                                                <li><a href="#"><img src="~/malefashion/img/icon/compare.png" alt=""> <span>Compare</span></a>
+                                                </li>
+                                                <li><a href="#"><img src="~/malefashion/img/icon/search.png" alt=""></a></li>
+                                            </ul>
+                                        </div>
                                     <div class="product__item__text rating">
                                         <h6>@p.Name</h6>
                                         <a href="#" class="add-cart">+ Add To Cart</a>
@@ -185,7 +185,7 @@ Layout = null;
                                         {
                                             <i class="fa fa-star-o"></i>
                                         }
-                                        <h5>$@p.Price</h5>
+                                        <h5 style="cursor:pointer;" onclick="window.location.href='/product/@p.ProductID';">$@p.Price</h5>
                                         <div class="product__color__select">
                                             <label for="pc-4">
                                                 <input type="radio" id="pc-4">
