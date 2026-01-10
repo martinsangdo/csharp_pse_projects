@@ -64,20 +64,20 @@
     var myChart1 = new Chart(ctx1, {
         type: "bar",
         data: {
-            labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022"],
+            labels: ["Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"],
             datasets: [{
-                    label: "USA",
-                    data: [15, 30, 55, 65, 60, 80, 95],
+                    label: "Ho Chi Minh",
+                    data: [1500, 3000, 5500, 6500, 6000, 8000, 9500],
                     backgroundColor: "rgba(0, 156, 255, .7)"
                 },
                 {
-                    label: "UK",
-                    data: [8, 35, 40, 60, 70, 55, 75],
+                    label: "Da Nang",
+                    data: [800, 3500, 4000, 6000, 7000, 5500, 7500],
                     backgroundColor: "rgba(0, 156, 255, .5)"
                 },
                 {
-                    label: "AU",
-                    data: [12, 25, 45, 55, 65, 70, 60],
+                    label: "Ha Noi",
+                    data: [1200, 2500, 4500, 5500, 6500, 7000, 6000],
                     backgroundColor: "rgba(0, 156, 255, .3)"
                 }
             ]
@@ -93,9 +93,9 @@
     var myChart2 = new Chart(ctx2, {
         type: "line",
         data: {
-            labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022"],
+            labels: ["Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"],
             datasets: [{
-                    label: "Salse",
+                    label: "Cost",
                     data: [15, 30, 55, 45, 70, 65, 85],
                     backgroundColor: "rgba(0, 156, 255, .5)",
                     fill: true
