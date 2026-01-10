@@ -44,4 +44,9 @@ public class HomeController : Controller
     {
         return View("~/Views/dashmin/signup.cshtml");
     }
+    //profile
+    public IActionResult Profile()
+    {
+        return View("~/Views/dashmin/profile.cshtml");
+    }
 }
