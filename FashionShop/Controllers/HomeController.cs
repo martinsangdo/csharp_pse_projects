@@ -6,11 +6,11 @@ namespace FashionShop.Controllers;
 
 public class HomeController : Controller
 {
+    //homepage (product list)
     public IActionResult Index()
     {
         return View("~/Views/malefashion/shop.cshtml");
     }
-    
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
@@ -27,5 +27,16 @@ public class HomeController : Controller
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+
+    //about us
+    public IActionResult About()
+    {
+        return View("~/Views/malefashion/about.cshtml");
+    }
+    //contact
+    public IActionResult Contact()
+    {
+        return View("~/Views/malefashion/contact.cshtml");
     }
 }

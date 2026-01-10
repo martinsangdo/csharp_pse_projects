@@ -53,12 +53,6 @@ public class ProductsController : Controller
         return View();
     }
 
-
-    [Route("shop/products")]    //custom url
-    public IActionResult pageList()
-    {
-        return View("Product_List");    //html page
-    }
     //display page detail of a product
     public IActionResult detail(int id)
     {
@@ -75,14 +69,6 @@ public class ProductsController : Controller
         return View();
     }
 
-    [Route("products/shop")]    //custom url
-    public IActionResult showShopPage()
-    {
-        List<Product> dbProducts = _productService.getAllProducts();
-        ViewBag.products = dbProducts;  //_productService.getDummyProducts();
-        return View("~/Views/ogani/shop-grid.cshtml");
-    }
-    
     [Route("products/shop/detail")]    //custom url
     public IActionResult showShopDetailPage()
     {

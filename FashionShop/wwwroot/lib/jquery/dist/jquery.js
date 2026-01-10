@@ -6433,7 +6433,7 @@ function curCSS( elem, name, computed ) {
 
 		// Support: IE <=9 - 11+
 		// IE only supports `"float"` in `getPropertyValue`; in computed styles
-		// it's only available as `"cssFloat"`. We no longer modify properties
+		// it's only available as `"~/malefashion/cssFloat"`. We no longer modify properties
 		// sent to `.css()` apart from camelCasing, so we need to check both.
 		// Normally, this would create difference in behavior: if
 		// `getPropertyValue` returns an empty string, the value returned
@@ -9569,7 +9569,7 @@ jQuery.extend( {
 			// Use a noop converter for missing script but not if jsonp
 			if ( !isSuccess &&
 				jQuery.inArray( "script", s.dataTypes ) > -1 &&
-				jQuery.inArray( "json", s.dataTypes ) < 0 ) {
+				jQuery.inArray( "~/malefashion/json", s.dataTypes ) < 0 ) {
 				s.converters[ "text script" ] = function() {};
 			}
 
@@ -9655,7 +9655,7 @@ jQuery.extend( {
 	},
 
 	getJSON: function( url, data, callback ) {
-		return jQuery.get( url, data, callback, "json" );
+		return jQuery.get( url, data, callback, "~/malefashion/json" );
 	},
 
 	getScript: function( url, callback ) {
@@ -10041,7 +10041,7 @@ jQuery.ajaxSetup( {
 } );
 
 // Detect, normalize options and install callbacks for jsonp requests
-jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
+jQuery.ajaxPrefilter( "~/malefashion/json jsonp", function( s, originalSettings, jqXHR ) {
 
 	var callbackName, overwritten, responseContainer,
 		jsonProp = s.jsonp !== false && ( rjsonp.test( s.url ) ?
@@ -10052,8 +10052,8 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 				rjsonp.test( s.data ) && "data"
 		);
 
-	// Handle iff the expected data type is "jsonp" or we have a parameter to set
-	if ( jsonProp || s.dataTypes[ 0 ] === "jsonp" ) {
+	// Handle iff the expected data type is "~/malefashion/jsonp" or we have a parameter to set
+	if ( jsonProp || s.dataTypes[ 0 ] === "~/malefashion/jsonp" ) {
 
 		// Get callback name, remembering preexisting value associated with it
 		callbackName = s.jsonpCallback = isFunction( s.jsonpCallback ) ?
@@ -10076,7 +10076,7 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 		};
 
 		// Force json dataType
-		s.dataTypes[ 0 ] = "json";
+		s.dataTypes[ 0 ] = "~/malefashion/json";
 
 		// Install callback
 		overwritten = window[ callbackName ];

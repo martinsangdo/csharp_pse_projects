@@ -25,7 +25,7 @@ public class ProductService
         Dictionary<string, JsonElement> rawDict = _externalService.sendGetRequest("https://dummyjson.com/products");
         if (!rawDict.TryGetValue("products", out JsonElement productsElement))
         {
-            throw new Exception("JSON does not contain 'products'");
+            throw new Exception("~/malefashion/jsON does not contain 'products'");
         }
         List<Dictionary<string, JsonElement>> rawProducts = JsonSerializer.Deserialize<List<Dictionary<string, JsonElement>>>(rawDict["products"])!;
         foreach (var item in rawProducts)

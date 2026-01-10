@@ -1627,7 +1627,7 @@ $.extend( $.validator, {
 			$.ajax( $.extend( true, {
 				mode: "abort",
 				port: this.elementAjaxPort( element ),
-				dataType: "json",
+				dataType: "~/malefashion/json",
 				data: data,
 				context: validator.currentForm,
 				success: function( response ) {
