@@ -1,55 +1,121 @@
-# Prerequisites
-*.d
+############################################
+# Visual Studio / Rider / VS Code
+############################################
+.vs/
+.vscode/
+.idea/
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+############################################
+# Build Results
+############################################
+bin/
+obj/
+out/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+AnyCPU/
+platforms/
 
-# Linker output
-*.ilk
-*.map
-*.exp
+############################################
+# ASP.NET / MVC Generated
+############################################
+wwwroot/lib/
+wwwroot/dist/
+wwwroot/bundles/
 
-# Precompiled Headers
-*.gch
-*.pch
+############################################
+# User-specific Files
+############################################
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+############################################
+# Rider / Resharper
+############################################
+_ReSharper*/
+*.DotSettings.user
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+############################################
+# NuGet
+############################################
+packages/
+*.nupkg
+*.snupkg
+.nuget/
+project.lock.json
+project.fragment.lock.json
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+############################################
+# Logs
+############################################
+*.log
+logs/
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+############################################
+# OS Files
+############################################
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+############################################
+# Publishing / Deployment
+############################################
+publish/
+PublishProfiles/
+*.Publish.xml
 
-# debug information files
-*.dwo
+############################################
+# EF Core / Database
+############################################
+*.mdf
+*.ldf
+*.db
+*.sqlite
+
+############################################
+# Secrets / Environment
+############################################
+appsettings.*.json
+!appsettings.json
+.env
+
+############################################
+# Certificates
+############################################
+*.pfx
+*.cer
+
+############################################
+# Backup & Temp
+############################################
+*.bak
+*.tmp
+*.temp
+*.old
+
+############################################
+# Coverage & Test Results
+############################################
+TestResults/
+*.coverage
+*.coveragexml
+
+############################################
+# Node (for MVC frontend)
+############################################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+############################################
+# Dotnet Tools
+############################################
+.dotnet/
