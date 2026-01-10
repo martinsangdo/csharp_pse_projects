@@ -13,5 +13,6 @@ public class Product
     public double Price { get; set; }
     public byte Quantity { get; set; }
     public bool IsActive { get; set; }
+    public double Star { get; set; }
     public string? ImageUrl { get; set; }    // virtual field from ProductImages
 }

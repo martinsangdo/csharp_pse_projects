@@ -5,4 +5,5 @@ public class ProductDto
     public double Price { get; set; }
     public required string Description { get; set; }
     public string? ImageUrl { get; set; }
+    public double Star { get; set; }
 }

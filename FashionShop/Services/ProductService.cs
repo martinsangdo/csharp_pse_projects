@@ -25,6 +25,7 @@ public class ProductService
                 Name = p.Name,
                 Price = p.Price,
                 Description = p.Description,
+                Star = p.Star,
                 ImageUrl = imgs.Select(x => x.Url).FirstOrDefault()   // FIRST image
             };
 
