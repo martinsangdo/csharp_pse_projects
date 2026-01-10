@@ -14,12 +14,15 @@ public class ProductsController : Controller
     }
 
     //homepage (product list)
-    [Route("/")]
-    public IActionResult list()
+    [Route("{page:int?}")]
+    public IActionResult list(int page = 1)
     {
-        var products = _productService.getListPagination();
-        ViewBag.products = products;
-
+        //get products
+        var products = _productService.GetListPagination(page, 6);
+        ViewBag.products = products.Data;
+        ViewBag.Page = products.Page;
+        ViewBag.Total = products.Total;
+        ViewBag.Limit = products.Limit;
         //categories
         ViewBag.categories = _productService.getLeafCategories();
 

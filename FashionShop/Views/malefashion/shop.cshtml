@@ -187,13 +187,33 @@ Layout = null;
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
+                            @{
+                                int current = ViewBag.Page;
+                                int total = ViewBag.Total;
+                                int limit = ViewBag.Limit;
+
+                                int totalPages = (int)Math.Ceiling((double)total / limit);
+                            }
+
                             <div class="product__pagination">
-                                <a class="active" href="#">1</a>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <span>...</span>
-                                <a href="#">21</a>
+
+                                @if (current > 1)
+                                {
+                                    <a href="/@(current - 1)">&laquo;</a>
+                                }
+
+                                @for (int i = Math.Max(1, current - 2); i <= Math.Min(totalPages, current + 2); i++)
+                                {
+                                    <a href="/@i" class="@(i == current ? "active" : "")">@i</a>
+                                }
+
+                                @if (current < totalPages)
+                                {
+                                    <a href="/@(current + 1)">&raquo;</a>
+                                }
+
                             </div>
+
                         </div>
                     </div>
                 </div>

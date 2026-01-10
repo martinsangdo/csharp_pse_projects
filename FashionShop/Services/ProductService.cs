@@ -1,6 +1,7 @@
 
 using System.Text.Json;
 using FashionShop.Services;
+using Microsoft.EntityFrameworkCore;
 
 public class ProductService
 {
@@ -13,9 +14,23 @@ public class ProductService
         _db = db;
     }
 
-    public List<Product> getListPagination()
+    public PagedResult<Product> GetListPagination(int page, int limit)
     {
-        return _db.Products.ToList();
+        if (page < 1) page = 1;
+        if (limit < 1) limit = 10;
+
+        var query = _db.Products.AsNoTracking();
+
+        return new PagedResult<Product>
+        {
+            Page = page,
+            Limit = limit,
+            Total = query.Count(),
+            Data = query.OrderBy(p => p.ProductID)
+                        .Skip((page - 1) * limit)
+                        .Take(limit)
+                        .ToList()
+        };
     }
     //get top categories
     public List<Category> getLeafCategories()
