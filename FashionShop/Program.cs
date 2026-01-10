@@ -1,8 +1,21 @@
+using FashionShop.Services;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+//to show logs in console
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.AddDebug();
+//add custom service
+builder.Services.AddHttpClient();
+builder.Services.AddScoped<ExternalService>();
+builder.Services.AddScoped<ProductService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+   options.UseSqlServer(builder.Configuration.GetConnectionString("MyDatabase")));
+   
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

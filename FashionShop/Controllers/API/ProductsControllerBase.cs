@@ -56,13 +56,6 @@ public class ProductsControllerBase : ControllerBase
         return Ok(response);
     }
 
-    [HttpGet]
-    [Route("external/list")]
-    public IActionResult getProductsFromExternalSource()
-    {
-        var products = _productService.getDummyProducts();
-        return Ok(products);
-    }
 
     //========== POST
     //get data from Form
@@ -82,15 +75,6 @@ public class ProductsControllerBase : ControllerBase
         return Ok(json);
     }
     
-    [HttpPost("discount")]
-    public async Task<IActionResult> calculateDiscount()
-    {
-        using var reader = new StreamReader(Request.Body);
-        var json = await reader.ReadToEndAsync();
-        var data = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json);
-        double finalPrice = data["price"].GetDouble() - data["price"].GetDouble() * data["percent"].GetDouble();
-        return Ok(finalPrice);
-    }
     //received via Dto
     [HttpPost]
     public IActionResult CreateProduct([FromBody] ProductDto product)

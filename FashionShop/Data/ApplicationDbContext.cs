@@ -7,5 +7,5 @@ public class ApplicationDbContext : DbContext
     {
     }
 
-    public DbSet<Product> Product { get; set; } //DbSet<Product>: refer to the class "Product", Product -> refer to table named "product"
+    public DbSet<Product> Products { get; set; } //DbSet<Product>: refer to the class "Product", Products -> refer to table named "Products"
 }

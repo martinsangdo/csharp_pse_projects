@@ -4,75 +4,40 @@ using Microsoft.AspNetCore.Mvc;
 
 public class ProductsController : Controller
 {
+    private readonly ILogger<ProductsController> _logger;
     private readonly ProductService _productService;
 
-    public ProductsController(ProductService productService)
+    public ProductsController(ILogger<ProductsController> logger, ProductService productService)
     {
+        _logger = logger;
         _productService = productService;
     }
 
-    public List<ProductDto> getSampleList()
-    {
-        // Sample product list
-        var products = new List<ProductDto>
-        {
-            new ProductDto
-            {
-                Id = 1,
-                Name = "Keyboard",
-                Price = 20.5,
-                description = "Mechanical keyboard",
-                image_url = "https://images.pexels.com/photos/585752/pexels-photo-585752.jpeg",
-                category_id = 1
-            },
-            new ProductDto
-            {
-                Id = 2,
-                Name = "Mouse",
-                Price = 10.0,
-                description = "Wireless mouse",
-                image_url = "https://images.pexels.com/photos/119550/pexels-photo-119550.jpeg",
-                category_id = 2
-            }
-        };
-        return products;
-    }
-
+    //homepage (product list)
+    [Route("/")]
     public IActionResult list()
     {
-        ViewBag.products = getSampleList();
-        //sample categories
-        ViewBag.categories = new List<string> { "Keyboard", "Mouse", "PC", "Printer" };
-        //
-        return View();
-    }
+        _logger.LogInformation("Get list");
 
-    public IActionResult external_list()
-    {
-        ViewBag.products = _productService.getDummyProducts();
-        return View();
+        var products = _productService.getListPagination();
+        ViewBag.products = products;
+
+        _logger.LogInformation("Loaded {Count} products", products.Count);
+        
+        //sample categories
+        // ViewBag.categories = new List<string> { "Keyboard", "Mouse", "PC", "Printer" };
+        return View("~/Views/malefashion/shop.cshtml");
     }
 
     //display page detail of a product
     public IActionResult detail(int id)
     {
-        ProductDto sampleProduct = new ProductDto
-        {
-            Id = 1,
-            Name = "Keyboard",
-            Price = 20.5,
-            description = "Mechanical keyboard",
-            image_url = "https://images.pexels.com/photos/585752/pexels-photo-585752.jpeg",
-            category_id = 1
-        };
-        ViewBag.detail = sampleProduct; //inject this info to view
         return View();
     }
 
     [Route("products/shop/detail")]    //custom url
     public IActionResult showShopDetailPage()
     {
-        ViewBag.product = _productService.getDummyProductDetail();
-        return View("~/Views/ogani/shop-details.cshtml");
+        return View("~/Views/malefashion/product-details.cshtml");
     }
 }
