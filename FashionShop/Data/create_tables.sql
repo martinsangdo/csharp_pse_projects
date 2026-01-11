@@ -48,3 +48,30 @@ USE malefashion;
 --     IsActive BIT DEFAULT 1
 -- );
 
+-- CREATE TABLE Orders (
+--     OrderID INT IDENTITY(1,1) PRIMARY KEY,
+--     UserID INT,
+--     Status NVARCHAR(50) DEFAULT 'Pending',
+--     Subtotal DECIMAL(18,2),
+--     Tax DECIMAL(18,2),
+--     ShippingFee DECIMAL(18,2),
+--     Total DECIMAL(18,2),
+--     CreatedAt DATETIME2 DEFAULT SYSDATETIME()
+-- );
+
+-- CREATE TABLE OrderItems (
+--     OrderItemID INT IDENTITY(1,1) PRIMARY KEY,
+--     OrderID INT,
+--     VariantID INT,
+--     Quantity INT,
+--     UnitPrice DECIMAL(18,2)
+-- );
+
+-- CREATE TABLE Payments (
+--     PaymentID INT IDENTITY(1,1) PRIMARY KEY,
+--     OrderID INT,
+--     Provider NVARCHAR(50),
+--     Status NVARCHAR(50),
+--     Amount DECIMAL(18,2),
+--     PaidAt DATETIME2
+-- );

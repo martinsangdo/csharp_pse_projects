@@ -34,7 +34,7 @@ public class AdminController : Controller
     [Route("/admin/orders")]
     public IActionResult adminOrders()
     {
-        return View("~/Views/dashmin/admin/products.cshtml");
+        return View("~/Views/dashmin/admin/orders.cshtml");
     }
     [Route("/admin/order/{id:int?}")]
     public IActionResult adminOrderDetail(int id)
@@ -46,7 +46,7 @@ public class AdminController : Controller
     [Route("/admin/users")]
     public IActionResult adminUsers()
     {
-        return View("~/Views/dashmin/admin/products.cshtml");
+        return View("~/Views/dashmin/admin/users.cshtml");
     }
     [Route("/admin/user/{id:int?}")]
     public IActionResult adminUserDetail(int id)
@@ -58,7 +58,7 @@ public class AdminController : Controller
     [Route("/admin/categories")]
     public IActionResult adminCategories()
     {
-        return View("~/Views/dashmin/admin/products.cshtml");
+        return View("~/Views/dashmin/admin/categories.cshtml");
     }
     [Route("/admin/category/{id:int?}")]
     public IActionResult adminCategoryDetail(int id)

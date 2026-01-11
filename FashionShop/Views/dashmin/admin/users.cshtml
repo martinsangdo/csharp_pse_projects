@@ -1,0 +1,152 @@
+@{
+Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/dashmin/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/dashmin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/dashmin/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/dashmin/css/style.css" rel="stylesheet">
+    <style>
+        .product_img {width:50px;height:auto;}
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Sidebar Start -->
+        @await Html.PartialAsync("_Admin_Left_Menu.cshtml")
+        <!-- Sidebar End -->
+
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            @await Html.PartialAsync("_Admin_Top_Menu.cshtml")
+            <!-- Navbar End -->
+
+
+            <!-- Table Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Order list</h6>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>User ID</th>
+                                            <th>Email</th>
+                                            <th>Full Name</th>
+                                            <th>Created At</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>8641</td>
+                                            <td>thanhnguyen88@gmail.com</td>
+                                            <td>Nguyen Kim Thanh</td>
+                                            <td>02/01/2026 09:10</td>
+                                            <td><span class="badge bg-success">Active</span></td>
+                                            <td><a href="#">View</a> | <a href="#">Disable</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2422</td>
+                                            <td>hoangtran933@yahoo.com</td>
+                                            <td>Tran Thai Hoang</td>
+                                            <td>02/12/2025 11:42</td>
+                                            <td><span class="badge bg-danger">Inactive</span></td>
+                                            <td><a href="#">View</a> | <a href="#">Enable</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2863</td>
+                                            <td>hoa.lethi@outlook.com</td>
+                                            <td>Le Thi Hoa</td>
+                                            <td>23/11/2025 14:20</td>
+                                            <td><span class="badge bg-success">Active</span></td>
+                                            <td><a href="#">View</a> | <a href="#">Disable</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1294</td>
+                                            <td>thaotranghoang8@gmail.com</td>
+                                            <td>Tran Hoang Thao</td>
+                                            <td>05/01/2026 08:55</td>
+                                            <td><span class="badge bg-success">Active</span></td>
+                                            <td><a href="#">View</a> | <a href="#">Disable</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>9765</td>
+                                            <td>thanhnguyen193@gmail.com</td>
+                                            <td>Nguyen Kim Thanh</td>
+                                            <td>15/4/2025 16:30</td>
+                                            <td><span class="badge bg-danger">Inactive</span></td>
+                                            <td><a href="#">View</a> | <a href="#">Enable</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="h-100 p-4">
+                            <div class="btn-toolbar" role="toolbar">
+                                <div class="btn-group me-2" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-primary">1</button>
+                                    <button type="button" class="btn">2</button>
+                                    <button type="button" class="btn">3</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Table End -->
+        </div>
+        <!-- Content End -->
+
+    </div>
+
+    @await Html.PartialAsync("_Admin_Bottom.cshtml")
+
+</body>
+
+</html>

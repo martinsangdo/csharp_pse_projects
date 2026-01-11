@@ -1,0 +1,164 @@
+@{
+Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Orders</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/dashmin/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/dashmin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/dashmin/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/dashmin/css/style.css" rel="stylesheet">
+    <style>
+        .product_img {width:50px;height:auto;}
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Sidebar Start -->
+        @await Html.PartialAsync("_Admin_Left_Menu.cshtml")
+        <!-- Sidebar End -->
+
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            @await Html.PartialAsync("_Admin_Top_Menu.cshtml")
+            <!-- Navbar End -->
+
+
+            <!-- Table Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Order list</h6>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>User Name</th>
+                                            <th>Status</th>
+                                            <th>Tax</th>
+                                            <th>Shipping Fee</th>
+                                            <th>Total</th>
+                                            <th>Created At</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1001</td>
+                                            <td>Nguyen Thi Thanh</td>
+                                            <td><span class="badge bg-warning">Pending</span></td>
+                                            <td>$3.50</td>
+                                            <td>$5.00</td>
+                                            <td><strong>$58.50</strong></td>
+                                            <td>10/1/2026 14:22</td>
+                                            <td><a href="#">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1002</td>
+                                            <td>Nguyen Kim Thanh</td>
+                                            <td><span class="badge bg-primary">Processing</span></td>
+                                            <td>$2.00</td>
+                                            <td>$4.00</td>
+                                            <td><strong>$46.00</strong></td>
+                                            <td>10/1/2026 12:40</td>
+                                            <td><a href="#">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1003</td>
+                                            <td>Tran Hoang Thao</td>
+                                            <td><span class="badge bg-success">Delivered</span></td>
+                                            <td>$4.25</td>
+                                            <td>$6.00</td>
+                                            <td><strong>$110.25</strong></td>
+                                            <td>9/1/2026 19:11</td>
+                                            <td><a href="#">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1004</td>
+                                            <td>Le Thi Hoa</td>
+                                            <td><span class="badge bg-danger">Cancelled</span></td>
+                                            <td>$0.00</td>
+                                            <td>$0.00</td>
+                                            <td><strong>$0.00</strong></td>
+                                            <td>08/1/2026 15:32</td>
+                                            <td><a href="#">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1005</td>
+                                            <td>Tran Thai Hoang</td>
+                                            <td><span class="badge bg-info">Shipped</span></td>
+                                            <td>$3.00</td>
+                                            <td>$5.00</td>
+                                            <td><strong>$78.00</strong></td>
+                                            <td>7/1/2026 09:18</td>
+                                            <td><a href="#">View</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="h-100 p-4">
+                            <div class="btn-toolbar" role="toolbar">
+                                <div class="btn-group me-2" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-primary">1</button>
+                                    <button type="button" class="btn">2</button>
+                                    <button type="button" class="btn">3</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Table End -->
+        </div>
+        <!-- Content End -->
+
+    </div>
+
+    @await Html.PartialAsync("_Admin_Bottom.cshtml")
+
+</body>
+
+</html>
