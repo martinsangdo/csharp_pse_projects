@@ -4,6 +4,22 @@ This project demonstrates enterprise-level architecture, clean MVC separation, a
 
 
 **🚀 Screenshots**
+<p align="center">
+  <img src="FashionShop/wwwroot/screenshots/home.png" width="480"/>
+  <img src="FashionShop/wwwroot/screenshots/about.png" width="480"/>
+  <img src="FashionShop/wwwroot/screenshots/contact.png" width="480"/>
+  <img src="FashionShop/wwwroot/screenshots/categories.png" width="480"/>
+  <img src="FashionShop/wwwroot/screenshots/product-1.png" width="480"/>
+  <img src="FashionShop/wwwroot/screenshots/product-2.png" width="480"/>
+  <img src="FashionShop/wwwroot/screenshots/cart.png" width="480"/>
+  <img src="FashionShop/wwwroot/screenshots/checkout.png" width="480"/>
+
+  <img src="FashionShop/wwwroot/screenshots/admin/dashboard.png" width="480"/>
+  <img src="FashionShop/wwwroot/screenshots/admin/products.png" width="480"/>
+  <img src="FashionShop/wwwroot/screenshots/admin/orders.png" width="480"/>
+  <img src="FashionShop/wwwroot/screenshots/admin/users.png" width="480"/>
+  <img src="FashionShop/wwwroot/screenshots/admin/categories.png" width="480"/>
+</p>
 
 
 **📊 Admin Dashboard**\
