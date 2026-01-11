@@ -51,9 +51,15 @@ public class ProductsController : Controller
         return View("~/Views/malefashion/category.cshtml");
     }
     //ADMIN
-    [Route("/admin/product/{id:int?}")]
-    public IActionResult adminProductDetail(int id)
+    [Route("/cart")]
+    public IActionResult cart()
     {
-        return View("~/Views/dashmin/admin/product_detail.cshtml");
+        return View("~/Views/malefashion/cart.cshtml");
+    }
+
+    [Route("/checkout")]
+    public IActionResult checkout()
+    {
+        return View("~/Views/malefashion/checkout.cshtml");
     }
 }
