@@ -57,7 +57,7 @@ Open appsettings.json and update:\
 }
 
 
-**3️⃣ Run Sample SQL to create tables and data**\
+**3️⃣ Run Sample SQL to create tables and data**
 1. /Data/create_tables.sql
 2. /Data/insert_data.sql
 
